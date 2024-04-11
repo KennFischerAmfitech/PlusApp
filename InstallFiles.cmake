@@ -312,6 +312,10 @@ IF(PLUSBUILD_DOWNLOAD_PLUSLIBDATA AND EXISTS "${PLUSLIB_DATA_DIR}")
       )
   ENDIF()
 
+  IF(PLUS_USE_AMFITRACK)
+    LIST(APPEND PLUSLIB_CONFIG_FILES ${PLUSLIB_DATA_DIR}/ConfigFiles/PlusDeviceSet_Server_AMFITRACK.xml)
+  ENDIF()
+
   SET(PLUSLIB_DATA_FILES
     ${PLUSLIB_DATA_DIR}/TestImages/fCal_Test_Calibration_3NWires.igs.mha
     ${PLUSLIB_DATA_DIR}/TestImages/fCal_Test_Calibration_3NWires_fCal2.0.igs.mha
